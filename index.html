@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chez Vincent — Bar</title>
+  <meta name="description" content="Chez Vincent — Bar. Cocktails soignés, ambiance conviviale. Réservez ou passez nous voir." />
+  <meta property="og:title" content="Chez Vincent — Bar" />
+  <meta property="og:description" content="Cocktails soignés, ambiance conviviale. Réservez ou passez nous voir." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.jpg" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root {
+      --bg: #0b1220;          /* bleu nuit */
+      --bg-soft: #0f172a;     /* slate-900 */
+      --card: #111827;        /* gris profond */
+      --text: #e5e7eb;        /* gris clair */
+      --muted: #94a3b8;       /* slate-400 */
+      --brand: #f59e0b;       /* ambre */
+      --brand-2: #22d3ee;     /* cyan */
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    /* Reset minimal */
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(34,211,238,.10), transparent 60%),
+                  radial-gradient(900px 500px at 120% 10%, rgba(245,158,11,.10), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--brand-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(1.2) blur(10px);
+      background: linear-gradient(180deg, rgba(11,18,32,.85), rgba(11,18,32,.55));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight: 700; letter-spacing: .2px; }
+    .logo {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: conic-gradient(from 210deg, var(--brand), var(--brand-2));
+      box-shadow: 0 0 0 3px rgba(255,255,255,.06), 0 10px 20px rgba(0,0,0,.35);
+    }
+    .nav a { color: var(--text); opacity:.9; padding: 10px 12px; border-radius: 10px; }
+    .nav a:hover { background: rgba(255,255,255,.06); text-decoration: none; }
+
+    .hero { padding: 72px 0 36px; text-align: center; }
+    .title { font-size: clamp(34px, 5vw, 56px); line-height: 1.05; margin: 0; letter-spacing: -0.5px; }
+    .subtitle { color: var(--muted); max-width: 750px; margin: 14px auto 0; font-size: clamp(16px, 2.5vw, 18px); }
+    .cta { margin-top: 24px; display:flex; gap:12px; justify-content:center; flex-wrap: wrap; }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding: 12px 18px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,.08); background: var(--card); color: var(--text); box-shadow: var(--shadow); }
+    .btn.primary { background: linear-gradient(120deg, var(--brand), var(--brand-2)); color: #0b1220; border: none; font-weight: 700; }
+    .btn:hover { filter: brightness(1.05); transform: translateY(-1px); }
+
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; margin-top: 24px; }
+    .card { grid-column: span 12; background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+    @media (min-width: 820px) {
+      .card.third { grid-column: span 4; }
+      .card.half { grid-column: span 6; }
+    }
+    .card h3 { margin: 0 0 12px; letter-spacing: .2px; }
+    .list { margin: 0; padding: 0; list-style: none; display:grid; gap: 10px; }
+    .item { display:flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 10px; border-radius: 12px; background: rgba(255,255,255,.03); }
+    .item span { color: var(--muted); font-size: 14px; }
+
+    .hours { width: 100%; border-collapse: collapse; }
+    .hours th, .hours td { padding: 10px 8px; border-bottom: 1px dashed rgba(255,255,255,.08); }
+    .hours td.day { color: var(--muted); width: 30%; }
+
+    .map { width: 100%; height: 280px; border: 0; border-radius: 14px; box-shadow: var(--shadow); }
+
+    footer { margin-top: 48px; padding: 28px 0 40px; color: var(--muted); text-align:center; border-top: 1px solid rgba(255,255,255,.06); }
+    .tiny { font-size: 12px; color: var(--muted); }
+    .badge { display:inline-block; padding: 2px 8px; border-radius: 999px; border: 1px solid rgba(255,255,255,.1); color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Navigation principale">
+      <div class="brand"><div class="logo" aria-hidden="true"></div><span>Chez Vincent</span></div>
+      <nav style="display:flex; gap:4px; flex-wrap: wrap;">
+        <a href="#menu">Carte</a>
+        <a href="#infos">Infos</a>
+        <a href="#contact">Contact</a>
+        <a class="badge" href="#reservation">Réserver</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="accueil">
+      <p class="badge">Bar</p>
+      <h1 class="title">Bienvenue <span aria-hidden="true">🍸</span> chez Vincent</h1>
+      <p class="subtitle">Cocktails soignés, bons produits, ambiance conviviale. Venez pour un apéro, restez pour la soirée.</p>
+      <div class="cta">
+        <a class="btn primary" href="#reservation">Réserver une table</a>
+        <a class="btn" href="#menu">Voir la carte</a>
+      </div>
+    </section>
+
+    <section id="menu" class="grid" aria-labelledby="menu-heading">
+      <div class="card half">
+        <h3 id="menu-heading">Cocktails signature</h3>
+        <ul class="list" aria-label="Liste des cocktails">
+          <li class="item"><strong>Classique maison</strong> <span>12€</span></li>
+          <li class="item"><strong>Crumble pêche (sans alcool)</strong> <span>8€</span></li>
+          <li class="item"><strong>Spritz aux agrumes</strong> <span>9€</span></li>
+          <li class="item"><strong>Highball du moment</strong> <span>10€</span></li>
+        </ul>
+        <p class="tiny">* Carte indicative. Remplacez par votre sélection.</p>
+      </div>
+      <div class="card half">
+        <h3>À partager</h3>
+        <ul class="list">
+          <li class="item"><strong>Planche mixte</strong> <span>14€</span></li>
+          <li class="item"><strong>Olives & pickles</strong> <span>5€</span></li>
+          <li class="item"><strong>Focaccia maison</strong> <span>6€</span></li>
+          <li class="item"><strong>Noix épicées</strong> <span>4€</span></li>
+        </ul>
+      </div>
+
+      <div class="card third">
+        <h3>Happy Hours</h3>
+        <p>Du mardi au vendredi, 18h–20h.</p>
+        <p class="tiny">Personnalisez ces horaires.</p>
+      </div>
+      <div class="card third">
+        <h3>Privatisation</h3>
+        <p>Événements, anniversaires, entreprises. <a href="#contact">Contactez-nous</a>.</p>
+      </div>
+      <div class="card third">
+        <h3>Cartes cadeaux</h3>
+        <p>Offrez un bon moment à vos proches, disponible au bar.</p>
+      </div>
+    </section>
+
+    <section id="infos" class="grid" aria-labelledby="infos-heading">
+      <div class="card half">
+        <h3 id="infos-heading">Horaires</h3>
+        <table class="hours" aria-label="Horaires d'ouverture">
+          <tbody>
+            <tr><td class="day">Lundi</td><td>Fermé</td></tr>
+            <tr><td class="day">Mar–Jeu</td><td>18:00 – 00:00</td></tr>
+            <tr><td class="day">Ven–Sam</td><td>18:00 – 02:00</td></tr>
+            <tr><td class="day">Dimanche</td><td>17:00 – 23:00</td></tr>
+          </tbody>
+        </table>
+        <p class="tiny">Adaptez selon vos heures réelles (format 24h).</p>
+      </div>
+
+      <div class="card half">
+        <h3>Adresse</h3>
+        <p>
+          <strong>Chez Vincent</strong><br />
+          12 Rue de l'Exemple, 00000 Votre Ville<br />
+          <a href="https://maps.google.com/?q=Chez+Vincent" target="_blank" rel="noreferrer">Voir sur Google Maps</a>
+        </p>
+        <iframe class="map" title="Carte" loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796!2d5.93!3d43.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sfr!2sfr!4v0000000000">
+        </iframe>
+      </div>
+
+      <div class="card">
+        <h3 id="reservation">Réservation</h3>
+        <p>Appelez-nous ou écrivez-nous pour réserver une table.</p>
+        <div class="cta" style="justify-content:flex-start">
+          <a class="btn primary" href="tel:+33000000000" aria-label="Appeler">Appeler</a>
+          <a class="btn" href="mailto:contact@chezvincent.bar?subject=Réservation">Écrire un email</a>
+          <a class="btn" href="#contact">Formulaire</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="grid" aria-labelledby="contact-heading">
+      <div class="card">
+        <h3 id="contact-heading">Contact</h3>
+        <form id="contact-form" onsubmit="return sendMailto(event)" aria-label="Formulaire de contact">
+          <div class="grid" style="margin-top:0">
+            <div class="card half" style="padding:14px">
+              <label for="name">Nom</label>
+              <input id="name" name="name" required placeholder="Votre nom" />
+            </div>
+            <div class="card half" style="padding:14px">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" required placeholder="vous@exemple.com" />
+            </div>
+          </div>
+          <div class="card" style="padding:14px">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Bonjour, je souhaite réserver..."></textarea>
+          </div>
+          <button class="btn primary" type="submit">Envoyer</button>
+          <p class="tiny">Ce formulaire ouvre votre client mail (solution sans serveur). Pour un vrai envoi, branchez un service (formspree, Netlify Forms, etc.).</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Chez Vincent — Tous droits réservés.</p>
+      <p class="tiny">Instagram · Facebook · TikTok — Ajoutez vos liens</p>
+    </div>
+  </footer>
+
+  <script>
+    // Accessibilité basique pour inputs
+    for (const sel of ["input", "textarea"]) {
+      document.querySelectorAll(sel).forEach(el => {
+        el.style.width = "100%";
+        el.style.padding = "10px 12px";
+        el.style.borderRadius = "12px";
+        el.style.border = "1px solid rgba(255,255,255,.12)";
+        el.style.background = "rgba(255,255,255,.04)";
+        el.style.color = "var(--text)";
+        el.addEventListener('focus', () => el.style.outline = '2px solid rgba(34,211,238,.5)');
+        el.addEventListener('blur',  () => el.style.outline = 'none');
+      });
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Envoi mailto (sans backend)
+    function sendMailto(e){
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+      const subject = `Contact site — ${decodeURIComponent(name)}`;
+      const body = `Nom: ${decodeURIComponent(name)}%0AEmail: ${decodeURIComponent(email)}%0A%0A${decodeURIComponent(message)}`;
+      window.location.href = `mailto:contact@chezvincent.bar?subject=${encodeURIComponent(subject)}&body=${body}`;
+      return false;
+    }
+  </script>
+
+  <!-- Données structurées (SEO local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    "name": "Chez Vincent",
+    "image": "/og-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 Rue de l'Exemple",
+      "addressLocality": "Votre Ville",
+      "postalCode": "00000",
+      "addressCountry": "FR"
+    },
+    "telephone": "+33 0 00 00 00 00",
+    "servesCuisine": "Cocktails",
+    "url": "https://chezvincent.bar",
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "18:00", "closes": "00:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "18:00", "closes": "02:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "17:00", "closes": "23:00"}
+    ]
+  }
+  </script>
+</body>
+</html>
