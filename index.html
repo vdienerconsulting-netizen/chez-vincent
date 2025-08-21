@@ -5,53 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CHEZ VINCENT — Buvette Cocktail à Toulon</title>
   <meta name="description" content="CHEZ VINCENT — bar à cocktails de quartier à Toulon : buvette moderne, conviviale et accessible. Cocktails classiques & signatures, bières, vins, softs, snacks maison. Ouvert 7/7 de 16h à 01h." />
-  <link rel="icon" href="A_logo_for_&quot;Chez_Vincent,&quot;_rendered_in_a_vintage-i.png" />
-  <meta property="og:image" content="A_logo_for_&quot;Chez_Vincent,&quot;_rendered_in_a_vintage-i.png" />
+
+  <!-- Fichier image OG utilisé aussi comme favicon (tu n'as qu'un index.html) -->
+  <link rel="icon" href="A_logo_for_%22Chez_Vincent,%22_rendered_in_a_vintage-i.png" />
+  <meta property="og:image" content="A_logo_for_%22Chez_Vincent,%22_rendered_in_a_vintage-i.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
+    /* Palette "Provence nocturne" (verte) */
     :root{
-      --bg:#1B243B; /* bleu encre */
-      --green:#4B3320; /* vert provençal */
-      --ochre:#B3771F; /* ocre brûlé */
-      --beige:#E6D8C3; /* beige pierre */
-      --gold:#CCAF70; /* doré chaud */
-      --ink:#E7E9EE;
-      --muted:#a8b0c3;
-      --card:#111a33;
-      --stroke:rgba(255,255,255,.08);
+      --bg: #243222;        /* vert nocturne profond (fond global) */
+      --card:#2D3C2A;       /* cartes */
+      --ink:#F5F5F0;        /* texte principal crème */
+      --muted:#C0C6B8;      /* texte secondaire gris/vert */
+      --green:#4B6B40;      /* olive accent */
+      --ochre:#B3771F;      /* ocre brûlé */
+      --beige:#E6D8C3;      /* beige pierre */
+      --gold:#CCAF70;       /* doré chaud */
+      --stroke:rgba(255,255,255,.10);
       --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.35);
     }
+
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
     body{
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
       background: var(--bg);
-      color:var(--ink); line-height:1.65;
+      color: var(--ink);
+      line-height: 1.65;
     }
     h1,h2,h3{font-family:'Playfair Display',serif; margin:0 0 10px}
     h1{font-size:clamp(38px,6vw,64px)}
     h2{font-size:clamp(26px,3.2vw,34px)}
     h3{font-size:clamp(18px,2vw,22px)}
     p{margin:0 0 12px}
-    a{color:var(--ochre); text-decoration:none}
+    a{color:var(--gold); text-decoration:none}
     a:hover{text-decoration:underline}
 
     .container{max-width:1080px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(1.2) blur(10px);background:linear-gradient(180deg,rgba(27,36,59,.9),rgba(27,36,59,.6));border-bottom:1px solid var(--stroke)}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(1.2) blur(10px);background:linear-gradient(180deg, rgba(36,50,34,.9), rgba(36,50,34,.6));border-bottom:1px solid var(--stroke)}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
     .brand{font-weight:700;font-family:'Playfair Display',serif;font-size:20px}
     .nav a{color:var(--ink);opacity:.9;padding:10px 12px;border-radius:10px}
     .nav a:hover{background:rgba(255,255,255,.06);text-decoration:none}
 
-    .hero{padding:72px 0 36px;text-align:center;background:url('A_logo_for_&quot;Chez_Vincent,&quot;_rendered_in_a_vintage-i.png') center/contain no-repeat}
+    .hero{padding:72px 0 36px;text-align:center;
+      background:url('A_logo_for_%22Chez_Vincent,%22_rendered_in_a_vintage-i.png') center/contain no-repeat;
+      background-color:#1F2B1F; border-bottom:1px solid var(--stroke);
+    }
     .subtitle{color:var(--muted);max-width:780px;margin:10px auto 0;font-size:clamp(15px,2.2vw,18px)}
     .badges{margin-top:14px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
-    .badge{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--stroke);color:var(--muted);font-size:12px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--stroke);color:var(--muted);font-size:12px;background:rgba(0,0,0,.12)}
 
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:24px}
-    .card{grid-column:span 12;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--stroke);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .card{grid-column:span 12;background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid var(--stroke);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
     @media(min-width:860px){.half{grid-column:span 6}.third{grid-column:span 4}}
 
     .list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
@@ -100,7 +110,8 @@
 
     <section id="carte" class="grid">
       <div class="card half">
-        <img src="A_flat-style_digital_illustration_depicts_the_exte.png" alt="Illustration Chez Vincent" style="width:100%;border-radius:12px;margin-bottom:12px;">
+        <!-- Vignette menu -->
+        <img src="A_flat-style_digital_illustration_depicts_the_exte.png" alt="Illustration Chez Vincent" style="width:100%;border-radius:12px;margin-bottom:12px;display:block;">
         <h2>Cocktails</h2>
         <ul class="list">
           <li class="item"><strong>Framboise</strong> <span>12€</span></li>
@@ -119,6 +130,20 @@
           <li class="item"><strong>Houmous</strong> <span>8€</span></li>
           <li class="item"><strong>Tapenade</strong> <span>8€</span></li>
           <li class="item"><strong>Guacamole</strong> <span>8€</span></li>
+        </ul>
+        <h2 style="margin-top:18px">Bières & Vins</h2>
+        <ul class="list">
+          <li class="item"><strong>Bière pression</strong> <span>6€</span></li>
+          <li class="item"><strong>Vin rouge</strong> <span>5€</span></li>
+          <li class="item"><strong>Vin blanc</strong> <span>5€</span></li>
+          <li class="item"><strong>Rosé</strong> <span>5€</span></li>
+        </ul>
+        <h2 style="margin-top:18px">Softs</h2>
+        <ul class="list">
+          <li class="item"><strong>Sodas</strong> <span>3–4€</span></li>
+          <li class="item"><strong>Eaux</strong> <span>2–3€</span></li>
+          <li class="item"><strong>Jus</strong> <span>3–4€</span></li>
+          <li class="item"><strong>Tonic & ginger beer</strong> <span>3–4€</span></li>
         </ul>
       </div>
     </section>
