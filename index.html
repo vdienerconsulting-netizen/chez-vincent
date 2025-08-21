@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CHEZ VINCENT — Buvette Cocktail à Toulon</title>
   <meta name="description" content="CHEZ VINCENT — bar à cocktails de quartier à Toulon : buvette moderne, conviviale et accessible. Cocktails classiques & signatures, bières, vins, softs, snacks maison. Ouvert 7/7 de 16h à 01h." />
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" href="A_logo_for_&quot;Chez_Vincent,&quot;_rendered_in_a_vintage-i.png" />
+  <meta property="og:image" content="A_logo_for_&quot;Chez_Vincent,&quot;_rendered_in_a_vintage-i.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      /* Palette "provençal revisité" */
-      --bg:#0c1324;           /* bleu nuit profond */
-      --bg-soft:#111a33;      /* variante douce */
-      --ink:#e7e9ee;          /* texte principal */
-      --muted:#a8b0c3;        /* texte secondaire */
-      --brand:#f5a524;        /* safran/ambre solaire */
-      --brand-2:#ffd166;      /* jaune doux */
-      --accent:#2bd4ea;       /* touche fraîche */
-      --card:#0f172a;         /* carte */
+      --bg:#1B243B; /* bleu encre */
+      --green:#4B3320; /* vert provençal */
+      --ochre:#B3771F; /* ocre brûlé */
+      --beige:#E6D8C3; /* beige pierre */
+      --gold:#CCAF70; /* doré chaud */
+      --ink:#E7E9EE;
+      --muted:#a8b0c3;
+      --card:#111a33;
       --stroke:rgba(255,255,255,.08);
       --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.35);
     }
@@ -27,61 +27,51 @@
     html,body{margin:0;padding:0}
     body{
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
-      background:
-        radial-gradient(900px 500px at 110% -10%, rgba(245,165,36,.10), transparent 60%),
-        radial-gradient(1200px 600px at -10% 10%, rgba(43,212,234,.08), transparent 60%),
-        var(--bg);
+      background: var(--bg);
       color:var(--ink); line-height:1.65;
     }
-    h1,h2,h3{font-family: 'Playfair Display', serif; letter-spacing:.2px; margin:0 0 10px}
-    h1{font-size:clamp(38px,6vw,64px); line-height:1.05}
+    h1,h2,h3{font-family:'Playfair Display',serif; margin:0 0 10px}
+    h1{font-size:clamp(38px,6vw,64px)}
     h2{font-size:clamp(26px,3.2vw,34px)}
     h3{font-size:clamp(18px,2vw,22px)}
     p{margin:0 0 12px}
-    a{color:var(--accent); text-decoration:none}
+    a{color:var(--ochre); text-decoration:none}
     a:hover{text-decoration:underline}
 
-    .container{max-width:1080px; margin:0 auto; padding:24px}
-    header{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter:saturate(1.2) blur(10px);
-      background:linear-gradient(180deg, rgba(12,19,36,.9), rgba(12,19,36,.6));
-      border-bottom:1px solid var(--stroke);
-    }
-    .nav{display:flex; align-items:center; justify-content:space-between; gap:12px}
-    .brand{display:flex; align-items:center; gap:12px; font-weight:700}
-    .logo{width:36px; height:36px; border-radius:50%; background:conic-gradient(from 210deg, var(--brand), var(--brand-2)); box-shadow:0 0 0 3px rgba(255,255,255,.06), 0 10px 20px rgba(0,0,0,.35)}
-    .nav a{color:var(--ink); opacity:.9; padding:10px 12px; border-radius:10px}
-    .nav a:hover{background:rgba(255,255,255,.06); text-decoration:none}
+    .container{max-width:1080px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(1.2) blur(10px);background:linear-gradient(180deg,rgba(27,36,59,.9),rgba(27,36,59,.6));border-bottom:1px solid var(--stroke)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:700;font-family:'Playfair Display',serif;font-size:20px}
+    .nav a{color:var(--ink);opacity:.9;padding:10px 12px;border-radius:10px}
+    .nav a:hover{background:rgba(255,255,255,.06);text-decoration:none}
 
-    .hero{padding:72px 0 36px; text-align:center}
-    .subtitle{color:var(--muted); max-width:780px; margin:10px auto 0; font-size:clamp(15px,2.2vw,18px)}
-    .badges{margin-top:14px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap}
-    .badge{display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid var(--stroke); color:var(--muted); font-size:12px}
+    .hero{padding:72px 0 36px;text-align:center;background:url('A_logo_for_&quot;Chez_Vincent,&quot;_rendered_in_a_vintage-i.png') center/contain no-repeat}
+    .subtitle{color:var(--muted);max-width:780px;margin:10px auto 0;font-size:clamp(15px,2.2vw,18px)}
+    .badges{margin-top:14px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--stroke);color:var(--muted);font-size:12px}
 
-    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:16px; margin-top:24px}
-    .card{grid-column:span 12; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid var(--stroke); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow)}
-    @media (min-width: 860px){ .half{grid-column:span 6} .third{grid-column:span 4} }
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:24px}
+    .card{grid-column:span 12;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--stroke);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    @media(min-width:860px){.half{grid-column:span 6}.third{grid-column:span 4}}
 
-    .list{list-style:none; margin:0; padding:0; display:grid; gap:10px}
-    .item{display:grid; grid-template-columns:1fr auto; align-items:baseline; gap:10px; padding:10px; border-radius:12px; background:rgba(255,255,255,.03)}
+    .list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+    .item{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:10px;padding:10px;border-radius:12px;background:rgba(255,255,255,.03)}
     .muted{color:var(--muted)}
 
-    .hours{width:100%; border-collapse:collapse}
-    .hours th,.hours td{padding:10px 8px; border-bottom:1px dashed var(--stroke)}
-    .hours td.day{color:var(--muted); width:30%}
+    .hours{width:100%;border-collapse:collapse}
+    .hours td{padding:10px 8px;border-bottom:1px dashed var(--stroke)}
+    .hours td.day{color:var(--muted);width:30%}
 
-    .map{width:100%; height:280px; border:0; border-radius:14px; box-shadow:var(--shadow)}
-
-    footer{margin-top:48px; padding:28px 0 40px; color:var(--muted); text-align:center; border-top:1px solid var(--stroke)}
-    .tiny{font-size:12px; color:var(--muted)}
+    .map{width:100%;height:280px;border:0;border-radius:14px;box-shadow:var(--shadow)}
+    footer{margin-top:48px;padding:28px 0 40px;color:var(--muted);text-align:center;border-top:1px solid var(--stroke)}
+    .tiny{font-size:12px;color:var(--muted)}
   </style>
 </head>
 <body>
   <header>
     <div class="container nav" role="navigation" aria-label="Navigation principale">
-      <div class="brand"><div class="logo" aria-hidden="true"></div><span>CHEZ VINCENT</span></div>
-      <nav style="display:flex; gap:4px; flex-wrap:wrap">
+      <div class="brand">CHEZ VINCENT</div>
+      <nav style="display:flex;gap:4px;flex-wrap:wrap">
         <a href="#concept">Concept</a>
         <a href="#carte">Carte</a>
         <a href="#infos">Infos</a>
@@ -101,35 +91,26 @@
       </div>
     </section>
 
-    <section id="concept" class="grid" aria-labelledby="concept-heading">
+    <section id="concept" class="grid">
       <div class="card">
-        <h2 id="concept-heading">L’esprit de la maison</h2>
+        <h2>L’esprit de la maison</h2>
         <p><strong>CHEZ VINCENT</strong> est un bar à cocktails de quartier, festif et accessible, implanté à Toulon. L’objectif est simple : offrir un lieu de vie convivial, où l’on vient boire de bons cocktails sans chichi, dans l’ambiance chaleureuse d’une buvette moderne.</p>
-        <p>Inspiré par l’énergie des brasseries de quartier et l’exigence des bars à cocktails, <strong>CHEZ VINCENT</strong> propose une carte volontairement épurée : des cocktails bien faits, visuellement soignés, mais plus simples, à base de produits qualitatifs mais non luxueux. Le tout à des tarifs doux, pensés pour fidéliser une clientèle locale en recherche de plaisir sans prétention.</p>
-        <p>Ce projet casse les codes du cocktail “élitiste” pour le rendre populaire et abordable, dans une atmosphère où l’humain prime : service attentionné, bonne humeur, et lien social au comptoir. Un bar qui ne se prend pas au sérieux, mais prend au sérieux ce qu’il sert.</p>
       </div>
     </section>
 
-    <section id="carte" class="grid" aria-labelledby="carte-heading">
+    <section id="carte" class="grid">
       <div class="card half">
-        <h2 id="carte-heading">Cocktails</h2>
-        <h3>Signatures · 12€</h3>
-        <ul class="list" aria-label="Cocktails signatures">
-          <li class="item"><strong>Framboise</strong> <span class="muted">fruité, frais</span> <span>12€</span></li>
-          <li class="item"><strong>Pomme</strong> <span class="muted">acidulé, net</span> <span>12€</span></li>
-          <li class="item"><strong>Peanut</strong> <span class="muted">gourmand, secoué</span> <span>12€</span></li>
-          <li class="item"><strong>M & T</strong> <span class="muted">amer, tonique</span> <span>12€</span></li>
+        <img src="A_flat-style_digital_illustration_depicts_the_exte.png" alt="Illustration Chez Vincent" style="width:100%;border-radius:12px;margin-bottom:12px;">
+        <h2>Cocktails</h2>
+        <ul class="list">
+          <li class="item"><strong>Framboise</strong> <span>12€</span></li>
+          <li class="item"><strong>Pomme</strong> <span>12€</span></li>
+          <li class="item"><strong>Peanut</strong> <span>12€</span></li>
+          <li class="item"><strong>M & T</strong> <span>12€</span></li>
+          <li class="item"><strong>Daiquiri</strong> <span>10€</span></li>
+          <li class="item"><strong>Old Fashioned</strong> <span>12€</span></li>
+          <li class="item"><strong>0% Fizzy Colada</strong> <span>8€</span></li>
         </ul>
-        <h3 style="margin-top:18px">Classiques revisités · 10–12€</h3>
-        <ul class="list" aria-label="Classiques revisités">
-          <li class="item"><strong>Daiquiri</strong> <span class="muted">rhum, citron vert, sucre</span> <span>10€</span></li>
-          <li class="item"><strong>Old Fashioned</strong> <span class="muted">whisky, sucre, bitter</span> <span>12€</span></li>
-        </ul>
-        <h3 style="margin-top:18px">Sans alcool</h3>
-        <ul class="list" aria-label="Mocktails">
-          <li class="item"><strong>0% Fizzy Colada</strong> <span class="muted">ananas, coco, pétillant</span> <span>8€</span></li>
-        </ul>
-        <p class="tiny">Prix indicatifs : classiques 10–12€, signatures 12€, sans alcool 8€.</p>
       </div>
 
       <div class="card half">
@@ -139,76 +120,27 @@
           <li class="item"><strong>Tapenade</strong> <span>8€</span></li>
           <li class="item"><strong>Guacamole</strong> <span>8€</span></li>
         </ul>
-        <p class="tiny">Idéal à partager. Produits simples, frais, efficaces.</p>
-      </div>
-
-      <div class="card third">
-        <h2>Spiritueux</h2>
-        <ul class="list" aria-label="Carte des spiritueux">
-          <li class="item"><strong>Whisky</strong> <span class="muted">blend, single malt</span> <span>6–10€</span></li>
-          <li class="item"><strong>Rhum</strong> <span class="muted">blanc, ambré</span> <span>6–9€</span></li>
-          <li class="item"><strong>Gin</strong> <span class="muted">classique, botanique</span> <span>6–9€</span></li>
-          <li class="item"><strong>Tequila / Mezcal</strong> <span class="muted">agave</span> <span>7–10€</span></li>
-          <li class="item"><strong>Vodka</strong> <span class="muted">pure, citron</span> <span>6–8€</span></li>
-          <li class="item"><strong>Amers & liqueurs</strong> <span class="muted">amaro, apéritifs</span> <span>5–8€</span></li>
-        </ul>
-      </div>
-      <div class="card third">
-        <h2>Bières & Vins</h2>
-        <ul class="list" aria-label="Bières et vins">
-          <li class="item"><strong>Bière pression</strong> <span>6€</span></li>
-          <li class="item"><strong>Vin rouge</strong> <span>5€</span></li>
-          <li class="item"><strong>Vin blanc</strong> <span>5€</span></li>
-          <li class="item"><strong>Rosé</strong> <span>5€</span></li>
-        </ul>
-        <p class="tiny">Sélection courte, efficace, locale quand c'est possible.</p>
-      </div>
-      <div class="card third">
-        <h2>Softs</h2>
-        <ul class="list" aria-label="Boissons sans alcool">
-          <li class="item"><strong>Sodas</strong> <span>3–4€</span></li>
-          <li class="item"><strong>Eaux</strong> <span>2–3€</span></li>
-          <li class="item"><strong>Jus</strong> <span>3–4€</span></li>
-          <li class="item"><strong>Tonic & ginger beer</strong> <span>3–4€</span></li>
-        </ul>
       </div>
     </section>
 
-    <section id="infos" class="grid" aria-labelledby="infos-heading">
+    <section id="infos" class="grid">
       <div class="card half">
-        <h2 id="infos-heading">Horaires</h2>
-        <table class="hours" aria-label="Horaires d'ouverture">
+        <h2>Horaires</h2>
+        <table class="hours">
           <tbody>
-            <tr><td class="day">Lundi</td><td>16:00 – 01:00</td></tr>
-            <tr><td class="day">Mardi</td><td>16:00 – 01:00</td></tr>
-            <tr><td class="day">Mercredi</td><td>16:00 – 01:00</td></tr>
-            <tr><td class="day">Jeudi</td><td>16:00 – 01:00</td></tr>
-            <tr><td class="day">Vendredi</td><td>16:00 – 01:00</td></tr>
-            <tr><td class="day">Samedi</td><td>16:00 – 01:00</td></tr>
-            <tr><td class="day">Dimanche</td><td>16:00 – 01:00</td></tr>
+            <tr><td class="day">Tous les jours</td><td>16:00 – 01:00</td></tr>
           </tbody>
         </table>
-        <p class="tiny">Ouvert tous les jours. Pas de réservation.</p>
       </div>
 
       <div class="card half">
         <h2>Adresse</h2>
-        <p>
-          <strong>CHEZ VINCENT</strong><br />
-          Toulon — centre-ville<br />
-          <a href="https://maps.google.com/?q=CHEZ+VINCENT+Toulon" target="_blank" rel="noreferrer">Ouvrir dans Google Maps</a>
-        </p>
-        <iframe class="map" title="Carte" loading="lazy"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796!2d5.93!3d43.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sfr!2sfr!4v0000000000">
-        </iframe>
+        <p><strong>CHEZ VINCENT</strong><br/>Toulon — centre-ville<br/><a href="https://maps.google.com/?q=CHEZ+VINCENT+Toulon" target="_blank">Ouvrir dans Google Maps</a></p>
       </div>
 
       <div class="card">
         <h2>Contact</h2>
-        <p>Pas de réservation. Pour toute question :
-          <a href="mailto:contact@chezvincent.bar?subject=Question%20depuis%20le%20site">contact@chezvincent.bar</a>
-          · <a href="tel:+33000000000">+33 0 00 00 00 00</a>
-        </p>
+        <p>Pas de réservation. Pour toute question : <a href="mailto:contact@chezvincent.bar">contact@chezvincent.bar</a></p>
       </div>
     </section>
   </main>
@@ -220,33 +152,6 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
-  <!-- Données structurées (SEO local) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BarOrPub",
-    "name": "CHEZ VINCENT",
-    "image": "/og-image.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Toulon",
-      "addressCountry": "FR"
-    },
-    "telephone": "+33 0 00 00 00 00",
-    "servesCuisine": "Cocktails",
-    "url": "https://chezvincent.bar",
-    "openingHoursSpecification": [
-      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "16:00", "closes": "01:00"}
-    ],
-    "priceRange": "€€",
-    "amenityFeature": [
-      {"@type": "LocationFeatureSpecification", "name": "Pas de réservation", "value": true}
-    ]
-  }
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
