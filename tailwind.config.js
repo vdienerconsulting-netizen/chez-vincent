@@ -7,7 +7,7 @@ export default {
   sable: "#D6CABA",
   terracotta: "#B37357",
   vert: "#596D52",
-  noir: "#D6CABA" // 🟢 temporairement même couleur que le fond
+  noir: "#0B0B0B" // 🟢 temporairement même couleur que le fond
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
