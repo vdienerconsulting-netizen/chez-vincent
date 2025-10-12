@@ -4,7 +4,7 @@ export default function Carte() {
   const [tab, setTab] = useState("cocktails");
 
   const cocktails = [
-    { n: "Pomelo Spritz", d: "Apérol, liqueur de pamplemousse maison, rosé pétillant", p: "10€" },
+    { n: "Pomeloa Spritz", d: "Apérol, liqueur de pamplemousse maison, rosé pétillant", p: "10€" },
     { n: "Highball Pomme", d: "Cordial de pomme, eau-de-vie de poire, eau pétillante", p: "8€" },
     { n: "Almond", d: "Sirop d’orgeat salé, citron vert, rhums du monde", p: "12€" },
     { n: "Framboise", d: "Cordial framboise maison, vin blanc, pisco", p: "12€" },
