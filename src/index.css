@@ -4,57 +4,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Corps principal */
 body {
   @apply bg-vert text-sable font-[Raleway];
   scroll-behavior: smooth;
 }
 
-/* Polices globales */
+/* Titres */
 h1, h2, h3 {
   font-family: 'Bayon', sans-serif;
 }
 
+/* Sous-titres / cocktails */
 .subtitle {
   font-family: 'Big Shoulders Text', sans-serif;
-  font-size: 40px;
 }
 
+/* Paragraphes */
 p {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  font-size: 20px;
 }
 
-/* Encadrés & boutons */
-.btn, .category {
-  @apply bg-terracotta text-sable rounded-lg transition-all duration-300;
-}
-.btn:hover, .category:hover {
-  @apply bg-sable text-vert;
+/* Boutons onglets */
+button {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
 }
 
-/* Transitions */
-.fade-in-up {
+/* Transitions douces */
+section {
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
   opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s forwards;
+  transform: translateY(60px);
+  animation: appear 1.2s forwards;
 }
 
-.slide-up {
-  opacity: 0;
-  transform: translateY(50px);
-  animation: slideUp 1s forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUp {
+@keyframes appear {
   to {
     opacity: 1;
     transform: translateY(0);
