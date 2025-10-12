@@ -29,7 +29,7 @@ export default function Carte() {
             key={id}
             onClick={() => setTab(id)}
             className={`px-5 py-2 rounded-full border ${
-              tab === id ? "bg-terracotta text-noir" : "border-sable text-sable"
+              tab === id ? "bg-terracotta text-noir" : "border-vert text-vert"
             }`}
           >
             {id === "cocktails" ? "Cocktails" : "Sans alcool"}
