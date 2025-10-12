@@ -2,32 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Polices */
 @import url('https://fonts.googleapis.com/css2?family=Bayon&family=Big+Shoulders+Text:wght@400;700&family=Raleway:wght@300;400&display=swap');
 
+/* Corps principal */
 body {
   @apply bg-vert text-sable font-[Raleway];
+  scroll-behavior: smooth;
 }
 
-/* Titres principaux */
+/* Polices globales */
 h1, h2, h3 {
   font-family: 'Bayon', sans-serif;
 }
 
-/* Sous-titres, cocktails */
 .subtitle {
   font-family: 'Big Shoulders Text', sans-serif;
   font-size: 40px;
 }
 
-/* Texte courant */
 p {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   font-size: 20px;
 }
 
-/* Boutons, encadrés, etc. */
+/* Encadrés & boutons */
 .btn, .category {
-  @apply bg-terracotta text-sable rounded-lg;
+  @apply bg-terracotta text-sable rounded-lg transition-all duration-300;
+}
+.btn:hover, .category:hover {
+  @apply bg-sable text-vert;
+}
+
+/* Transitions */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
