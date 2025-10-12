@@ -1,52 +1,63 @@
 import React, { useState } from "react";
 
 export default function Carte() {
-  const [tab, setTab] = useState("cocktails");
+  const categories = ["Cocktails", "Bière & Vin", "Spiritueux", "Soft", "Snacking"];
+  const [activeCategory, setActiveCategory] = useState("Cocktails");
 
-  const cocktails = [
-    { n: "Pomelo Spritz", d: "Apérol, liqueur de pamplemousse maison, rosé pétillant", p: "10€" },
-    { n: "Highball Pomme", d: "Cordial de pomme, eau-de-vie de poire, eau pétillante", p: "8€" },
-    { n: "Almond", d: "Sirop d’orgeat salé, citron vert, rhums du monde", p: "12€" },
-    { n: "Framboise", d: "Cordial framboise maison, vin blanc, pisco", p: "12€" },
-    { n: "Basilic", d: "Tequila basilic, liqueur d’abricot maison, citron vert", p: "10€" },
-  ];
-
-  const sansAlcool = [
-    { n: "Highball Pomme 0%", d: "Cordial pomme maison, eau pétillante", p: "6€" },
-    { n: "Floral", d: "Sirop de rose, citron vert, bissap maison", p: "6€" },
-    { n: "Framboise 0%", d: "Cordial framboise, rosé sans alcool, infusion pomme", p: "6€" },
-    { n: "M&T", d: "Melonade, farigoule, eau pétillante", p: "8€" },
-  ];
-
-  const menus = { cocktails, sansAlcool };
+  const menuItems = {
+    "Cocktails": [
+      { n: "Spritz Provençal", d: "Apéritif maison au romarin", p: "9€" },
+      { n: "Sans Alcool Menthe Citron", d: "Rafraîchissant et doux", p: "7€" },
+    ],
+    "Bière & Vin": [
+      { n: "Bière artisanale locale", d: "Brasserie de Provence", p: "6€" },
+      { n: "Vin rosé de Provence", d: "Verre", p: "5€" },
+    ],
+    "Spiritueux": [
+      { n: "Pastis de Marseille", d: "Classique provençal", p: "4€" },
+      { n: "Gin Tonic", d: "Gin local et tonic", p: "8€" },
+    ],
+    "Soft": [
+      { n: "Jus de fruits artisanaux", d: "Orange, pomme, abricot", p: "4€" },
+      { n: "Eau pétillante", d: "Bouteille 50cl", p: "3€" },
+    ],
+    "Snacking": [
+      { n: "Planche mixte", d: "Charcuteries, fromages", p: "12€" },
+      { n: "Tapenade et croûtons", d: "Olives noires et vertes", p: "8€" },
+    ],
+  };
 
   return (
-    <section id="carte" className="py-20 px-6 text-center">
-      <h2 className="text-4xl font-bold text-sable mb-8">La Carte</h2>
-      <div className="flex justify-center gap-4 mb-8">
-        {["cocktails", "sansAlcool"].map((id) => (
+    <section id="carte" className="bg-vert text-sable py-20 px-8 md:px-20 transition-all duration-1000 ease-in-out">
+      <h2 className="text-[90px] font-[Bayon] text-center mb-10">La Carte</h2>
+
+      {/* Onglets */}
+      <div className="flex flex-wrap justify-center gap-6 mb-10">
+        {categories.map((category) => (
           <button
-            key={id}
-            onClick={() => setTab(id)}
-            className={`px-5 py-2 rounded-full border ${
-              tab === id ? "bg-terracotta text-noir" : "border-vert text-vert"
+            key={category}
+            onClick={() => setActiveCategory(category)}
+            className={`px-6 py-2 border border-sable rounded-full text-sable transition-colors duration-500 ${
+              activeCategory === category ? "bg-sable text-vert" : "hover:bg-sable/20"
             }`}
           >
-            {id === "cocktails" ? "Cocktails" : "Sans alcool"}
+            {category}
           </button>
         ))}
       </div>
-      <ul className="max-w-xl mx-auto text-left">
-        {menus[tab].map((item, i) => (
-          <li key={i} className="mb-4 border-b border-sable/20 pb-2">
-            <div className="flex justify-between text-sable">
-              <span className="font-semibold">{item.n}</span>
-              <span>{item.p}</span>
+
+      {/* Liste */}
+      <div className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
+        {menuItems[activeCategory].map((item, index) => (
+          <div key={index} className="flex justify-between border-b border-sable/40 pb-2">
+            <div>
+              <p className="font-[Big Shoulders Text] text-[24px]">{item.n}</p>
+              <p className="text-[16px] text-sable/80">{item.d}</p>
             </div>
-            <p className="text-sable/70 text-sm">{item.d}</p>
-          </li>
+            <p className="text-[20px] font-[Raleway]">{item.p}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }
