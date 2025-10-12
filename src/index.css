@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Polices */
+@import url('https://fonts.googleapis.com/css2?family=Bayon&family=Big+Shoulders+Text:wght@400;700&family=Raleway:wght@300;400&display=swap');
+
 body {
-  @apply bg-vert text-sable font-sans;
+  @apply bg-vert text-sable font-[Raleway];
+}
+
+/* Titres principaux */
+h1, h2, h3 {
+  font-family: 'Bayon', sans-serif;
+}
+
+/* Sous-titres, cocktails */
+.subtitle {
+  font-family: 'Big Shoulders Text', sans-serif;
+  font-size: 40px;
+}
+
+/* Texte courant */
+p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+/* Boutons, encadrés, etc. */
+.btn, .category {
+  @apply bg-terracotta text-sable rounded-lg;
 }
