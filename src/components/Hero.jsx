@@ -1,22 +1,19 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="h-screen flex flex-col items-center justify-center relative text-center">
-      <motion.img
+    <section className="min-h-screen flex flex-col justify-center items-center text-center bg-vert text-sable relative">
+      <img
         src="/chez-vincent-titre.png"
-        alt="Chez Vincent - Buvette Cocktail"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        className="w-3/4 md:w-1/2"
+        alt="Chez Vincent"
+        className="w-[600px] max-w-[80%] mb-10"
       />
-      <a
-        href="#presentation"
-        className="absolute bottom-10 text-vert/70 hover:text-vert"
-      >
-        ↓
+      <a href="#concept" className="absolute bottom-10 animate-bounce">
+        <img
+          src="/arrow.png"
+          alt="flèche vers le bas"
+          className="w-16 h-16 mx-auto filter drop-shadow-lg"
+        />
       </a>
     </section>
   );
