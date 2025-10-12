@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        sable: "#D6CABA",
-        terracotta: "#B37357",
-        vert: "#596D52",
-        noir: "#0B0B0B"
+  sable: "#D6CABA",
+  terracotta: "#B37357",
+  vert: "#596D52",
+  noir: "#D6CABA" // 🟢 temporairement même couleur que le fond
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
