@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="h-screen flex flex-col items-center justify-center relative text-center">
       <motion.img
-        src="/CHEZ VINCENT + Sous titre GREEN.png"
+        src="/chez-vincent-titre.png"
         alt="Chez Vincent - Buvette Cocktail"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
