@@ -10,7 +10,7 @@ export default function Hero() {
       {/* BIENVENUE - apparaît en premier */}
       <motion.h3
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: -200 }}
+        animate={{ opacity: 1, y: -20000 }}
         transition={{ duration: 1 }}
         className="text-[90px] font-[Bayon] mb-2 tracking-wide"
       >
