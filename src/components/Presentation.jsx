@@ -49,6 +49,24 @@ export default function Presentation() {
           <p className="text-[20px] font-[Raleway] md:w-1/2">
             La carte évolue au fil des saisons, alliant créativité et savoir-faire pour surprendre
             vos papilles. Venez vivre une expérience gustative unique, à deux pas du port de Toulon.
+            <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  className="flex flex-col md:flex-row items-center gap-8"
+>
+  <img
+    src="/imageintro2.png"
+    alt="Concept 3"
+    className="w-full md:w-1/2 rounded-md shadow-md"
+  />
+  <p className="text-[20px] font-[Raleway] md:w-1/2">
+    Chez Vincent, c’est aussi une ambiance humaine. Chaque visite est une
+    rencontre, chaque cocktail une histoire. Ici, on valorise l’échange, la
+    proximité et la simplicité.
+  </p>
+</motion.div>
+
           </p>
         </motion.div>
       </div>
