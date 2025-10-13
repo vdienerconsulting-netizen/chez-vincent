@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "./components/Hero";
 import Presentation from "./components/Presentation";
 import Carte from "./components/Carte";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Hero />
       <Presentation />
       <Carte />
+      <Contact />
     </div>
   );
 }
