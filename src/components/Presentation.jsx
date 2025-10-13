@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Presentation() {
   return (
@@ -6,9 +7,22 @@ export default function Presentation() {
       id="concept"
       className="min-h-screen bg-sable text-vert flex flex-col items-center justify-center px-8 md:px-20 py-20"
     >
-      <h2 className="text-[90px] font-[Bayon] mb-10">Le Concept</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-[90px] font-[Bayon] mb-10"
+      >
+        Le Concept
+      </motion.h2>
+
       <div className="max-w-5xl space-y-16">
-        <div className="flex flex-col md:flex-row items-center gap-8">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col md:flex-row items-center gap-8"
+        >
           <img
             src="/imageintro1.png"
             alt="Concept 1"
@@ -19,9 +33,14 @@ export default function Presentation() {
             une ambiance provençale et décontractée. Des produits frais, locaux et un accueil
             chaleureux.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col md:flex-row-reverse items-center gap-8">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col md:flex-row-reverse items-center gap-8"
+        >
           <img
             src="/imageintro2.png"
             alt="Concept 2"
@@ -31,7 +50,7 @@ export default function Presentation() {
             La carte évolue au fil des saisons, alliant créativité et savoir-faire pour surprendre
             vos papilles. Venez vivre une expérience gustative unique, à deux pas du port de Toulon.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
