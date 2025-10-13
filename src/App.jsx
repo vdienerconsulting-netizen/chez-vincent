@@ -2,15 +2,15 @@ import React from "react";
 import Hero from "./components/Hero";
 import Presentation from "./components/Presentation";
 import Carte from "./components/Carte";
-import Infos from "./components/Infos";
 
-export default function App() {
+function App() {
   return (
-    <>
+    <div className="font-[Raleway] scroll-smooth">
       <Hero />
       <Presentation />
       <Carte />
-      <Infos />
-    </>
+    </div>
   );
 }
+
+export default App;
