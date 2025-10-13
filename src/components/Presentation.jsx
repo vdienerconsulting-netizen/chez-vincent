@@ -1,47 +1,37 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 export default function Presentation() {
-  const [offset, setOffset] = useState(0);
-  useEffect(() => {
-    const handleScroll = () => setOffset(window.scrollY * 0.1);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <section
       id="concept"
-      className="min-h-screen bg-sable text-vert flex flex-col justify-center items-center px-8 md:px-20 py-20 space-y-20 transition-all duration-700 ease-in-out"
+      className="min-h-screen bg-sable text-vert flex flex-col items-center justify-center px-8 md:px-20 py-20"
     >
-      <div className="max-w-5xl text-center fade-in-up">
-        <h2 className="text-[90px] font-[Bayon] mb-10">Le Concept</h2>
-        <p className="text-[20px] font-[Raleway] leading-relaxed">
-          Chez Vincent, la convivialité provençale rencontre l’art du cocktail.
-        </p>
-      </div>
+      <h2 className="text-[90px] font-[Bayon] mb-10">Le Concept</h2>
+      <div className="max-w-5xl space-y-16">
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          <img
+            src="/imageintro1.png"
+            alt="Concept 1"
+            className="w-full md:w-1/2 rounded-md shadow-md"
+          />
+          <p className="text-[20px] font-[Raleway] md:w-1/2">
+            Chez Vincent, c’est un lieu de convivialité où l’on déguste des cocktails maison dans
+            une ambiance provençale et décontractée. Des produits frais, locaux et un accueil
+            chaleureux.
+          </p>
+        </div>
 
-      <div className="flex flex-col md:flex-row items-center gap-10 slide-up">
-        <img
-          src="/imageintro1.png"
-          alt="Cocktails provençaux"
-          className="w-full md:w-1/3 rounded-lg shadow-lg transition-transform duration-700"
-          style={{ transform: `translateY(${offset * 0.3}px)` }}
-        />
-        <p className="text-[20px] font-[Raleway] md:w-1/2">
-          Un lieu chaleureux où les saveurs du Sud se mêlent à la créativité.
-        </p>
-      </div>
-
-      <div className="flex flex-col md:flex-row-reverse items-center gap-10 slide-up">
-        <img
-          src="/imageintro2.png"
-          alt="Ambiance conviviale"
-          className="w-full md:w-1/3 rounded-lg shadow-lg transition-transform duration-700"
-          style={{ transform: `translateY(${offset * 0.2}px)` }}
-        />
-        <p className="text-[20px] font-[Raleway] md:w-1/2">
-          Cocktails maison, bons produits, et une ambiance qui sent le soleil.
-        </p>
+        <div className="flex flex-col md:flex-row-reverse items-center gap-8">
+          <img
+            src="/imageintro2.png"
+            alt="Concept 2"
+            className="w-full md:w-1/2 rounded-md shadow-md"
+          />
+          <p className="text-[20px] font-[Raleway] md:w-1/2">
+            La carte évolue au fil des saisons, alliant créativité et savoir-faire pour surprendre
+            vos papilles. Venez vivre une expérience gustative unique, à deux pas du port de Toulon.
+          </p>
+        </div>
       </div>
     </section>
   );
