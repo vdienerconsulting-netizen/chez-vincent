@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen bg-vert text-sable flex flex-col justify-center items-center text-center overflow-hidden scale-[1.3]" // ↑ 30% plus grand
+      className="min-h-screen bg-vert text-sable flex flex-col justify-center items-center text-center overflow-hidden scale-[1.7]" // ↑ 30% plus grand
     >
       {/* BIENVENUE - apparaît en premier */}
       <motion.h3
@@ -34,7 +34,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 1 }}
-        className="w-[40%] md:w-[25%] mt-2"
+        className="w-[60%] md:w-[40%] mt-2"
       />
     </section>
   );
