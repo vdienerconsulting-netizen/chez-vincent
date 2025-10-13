@@ -31,9 +31,9 @@ export default function Hero() {
       <motion.img
         src="/chez-vincent-soustitre.png"
         alt="Chez Vincent - sous-titre"
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 1 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, delay: 1 }}
+        transition={{ duration: 1.3, delay: 1 }}
         className="w-[60%] md:w-[40%] mt-2"
       />
     </section>
