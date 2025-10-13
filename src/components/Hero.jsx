@@ -21,8 +21,8 @@ export default function Hero() {
       <motion.img
         src="/chez-vincent-titre.png"
         alt="Chez Vincent - Buvette Cocktail"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: -800 }}
         transition={{ duration: 1.4, delay: 0.4 }}
         className="w-[60%] md:w-[40%] mt-4"
       />
@@ -31,7 +31,7 @@ export default function Hero() {
       <motion.img
         src="/chez-vincent-soustitre.png"
         alt="Chez Vincent - sous-titre"
-        initial={{ opacity: 0, y: 2000 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 1 }}
         className="w-[60%] md:w-[40%] mt-2"
