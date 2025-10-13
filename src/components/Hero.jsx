@@ -10,7 +10,7 @@ export default function Hero() {
       {/* BIENVENUE - apparaît en premier */}
       <motion.h3
         initial={{ opacity: 0, y: -200 }}
-        animate={{ opacity: 1, y: -0 }}
+        animate={{ opacity: 1, y: -800 }}
         transition={{ duration: 1.5 }}
         className="text-[90px] font-[Bayon] mb-2 tracking-wide"
       >
@@ -22,7 +22,7 @@ export default function Hero() {
         src="/chez-vincent-titre.png"
         alt="Chez Vincent - Buvette Cocktail"
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: -800 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.4, delay: 0.4 }}
         className="w-[60%] md:w-[40%] mt-4"
       />
