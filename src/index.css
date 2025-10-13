@@ -39,11 +39,15 @@ section {
   animation: appear 1.2s forwards;
 }
 
+/* Animation fade-in + up */
 @keyframes appear {
   to {
     opacity: 1;
     transform: translateY(0);
-    #hero {
-  transform-origin: center center;
   }
+}
+
+/* Correction ici : */
+#hero {
+  transform-origin: center center;
 }
