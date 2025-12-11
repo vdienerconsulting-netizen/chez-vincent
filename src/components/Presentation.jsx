@@ -5,7 +5,7 @@ export default function Presentation() {
   return (
     <section
       id="concept"
-      className="bg-sable text-vert flex flex-col items-center px-8 md:px-20 py-16 md:py-20"
+      className="bg-sable text-vert flex flex-col items-center px-8 md:px-20 pt-8 md:pt-10 pb-16 md:pb-20"
     >
       <motion.h2
         initial={{ opacity: 0, y: 50 }}
