@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Hero from "./components/Hero";
 import Presentation from "./components/Presentation";
@@ -6,6 +6,10 @@ import Carte from "./components/Carte";
 import Contact from "./components/Contact";
 
 export default function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="bg-vert min-h-screen">
       <Hero />
