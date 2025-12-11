@@ -5,9 +5,9 @@ export default function Hero() {
   return (
     <motion.section
       id="hero"
-      initial={{ y: "30vh", scale: 1.3, opacity: 0 }}
-      animate={{ y: 0, scale: 1, opacity: 1 }}
-      transition={{ duration: 1.4, ease: "easeInOut" }}
+      initial={{ scale: 1.15, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 1.3, ease: "easeInOut" }}
       className="bg-vert text-sable flex flex-col items-center justify-center text-center overflow-hidden py-16 md:py-20"
     >
       {/* Titre */}
