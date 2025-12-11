@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-  sable: "#D6CABA",
-  terracotta: "#B37357",
-  vert: "#596D52",
+  sable: "#d6caba",
+  terracotta: "#834a43",
+  vert: "#7d8453",
   noir: "#0B0B0B" // 🟢 temporairement même couleur que le fond
       },
       fontFamily: {
