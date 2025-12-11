@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen bg-vert text-sable flex flex-col justify-center items-center text-center overflow-hidden scale-[1.7]"
+      className="min-h-screen bg-vert text-sable flex flex-col justify-center items-center text-center overflow-hidden scale-[1.2]"
     >
       {/* BIENVENUE - fade doux */}
       <motion.h3
