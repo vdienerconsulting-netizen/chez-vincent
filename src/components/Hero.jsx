@@ -7,15 +7,6 @@ export default function Hero() {
       id="hero"
       className="bg-vert text-sable flex flex-col items-center justify-center text-center overflow-hidden py-16 md:py-20"
     >
-      {/* BIENVENUE - fade doux */}
-      <motion.h3
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 30 }}
-        transition={{ duration: 2, ease: "easeOut" }}
-        className="text-[80px] font-[Bayon] mb-2 tracking-wide"
-      >
-        BIENVENUE
-      </motion.h3>
 
       {/* Titre */}
       <motion.img
