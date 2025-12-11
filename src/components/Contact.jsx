@@ -4,23 +4,43 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen bg-sable text-vert flex flex-col items-center justify-center px-8 md:px-20 py-20"
+      className="bg-sable text-vert flex flex-col items-center px-8 md:px-20 pt-8 md:pt-10 pb-16 md:pb-20"
     >
-      <h2 className="text-[90px] font-[Bayon] mb-10">Nous Trouver</h2>
-      <p className="text-[22px] font-[Raleway] mb-6 text-center">
-        📍 14 rue Chevalier Paul — 83000 Toulon  
+      <h2 className="text-[80px] font-[Bayon] mb-8 text-center">Contact</h2>
+
+      <p className="text-[20px] font-[Raleway] mb-6 text-center leading-relaxed">
+        📍 3 rue Jean Aicard — 83000 Toulon
         <br />
         🕒 Ouvert 7/7 — 17h à 1h
+        <br />
+        📧 chezvincent.cocktails@gmai.com
       </p>
-      <iframe
-        title="Google Map"
-        src="https://www.google.com/maps?q=14+rue+Chevalier+Paul+83000+Toulon&output=embed"
-        width="100%"
-        height="400"
-        style={{ border: 0, borderRadius: "12px" }}
-        allowFullScreen=""
-        loading="lazy"
-      ></iframe>
+
+      <div className="w-full max-w-5xl mb-6">
+        <iframe
+          title="Google Map - Chez Vincent"
+          src="https://www.google.com/maps?q=3+rue+Jean+Aicard+83000+Toulon&output=embed"
+          width="100%"
+          height="400"
+          style={{ border: 0, borderRadius: "12px" }}
+          allowFullScreen
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <div className="flex items-center justify-center gap-4">
+        <a
+          href="https://www.instagram.com/chezvincent.cocktails"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/iconeinstagram.png"
+            alt="Instagram Chez Vincent"
+            className="w-10 h-10 md:w-12 md:h-12 cursor-pointer hover:scale-105 transition-transform"
+          />
+        </a>
+      </div>
     </section>
   );
 }
