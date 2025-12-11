@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen bg-vert text-sable flex flex-col justify-center items-center text-center overflow-hidden scale-[1.7]"
+      className="bg-vert text-sable flex flex-col items-center justify-center text-center overflow-hidden py-16 md:py-20"
     >
       {/* BIENVENUE - fade doux */}
       <motion.h3
@@ -17,7 +17,7 @@ export default function Hero() {
         BIENVENUE
       </motion.h3>
 
-      {/* Titre - un peu plus haut */}
+      {/* Titre */}
       <motion.img
         src="/chez-vincent-titre.png"
         alt="Chez Vincent - Buvette Cocktail"
@@ -27,7 +27,7 @@ export default function Hero() {
         className="w-[60%] md:w-[40%] mt-2"
       />
 
-      {/* Sous-titre - un peu plus haut aussi */}
+      {/* Sous-titre */}
       <motion.img
         src="/chez-vincent-soustitre.png"
         alt="Chez Vincent - sous-titre"
