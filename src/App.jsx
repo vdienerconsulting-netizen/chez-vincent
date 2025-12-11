@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Hero from "./Hero";
-import Presentation from "./Presentation";
-import Carte from "./Carte";
-import Contact from "./Contact";
+import Hero from "./components/Hero";
+import Presentation from "./components/Presentation";
+import Carte from "./components/Carte";
+import Contact from "./components/Contact";
 
 export default function App() {
   return (
