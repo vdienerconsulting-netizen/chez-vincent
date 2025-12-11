@@ -10,7 +10,7 @@ export default function Hero() {
       {/* BIENVENUE - fade doux */}
       <motion.h3
         initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 30 }}
+        animate={{ opacity: 1, y: 70 }}
         transition={{ duration: 2, ease: "easeOut" }}
         className="text-[80px] font-[Bayon] mb-2 tracking-wide"
       >
