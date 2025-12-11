@@ -5,18 +5,19 @@ export default function Presentation() {
   return (
     <section
       id="concept"
-      className="min-h-screen bg-sable text-vert flex flex-col items-center justify-center px-8 md:px-20 py-20"
+      className="bg-sable text-vert flex flex-col items-center px-8 md:px-20 py-16 md:py-20"
     >
       <motion.h2
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-[90px] font-[Bayon] mb-10"
+        className="text-[80px] font-[Bayon] mb-10 text-center"
       >
         Le Concept
       </motion.h2>
 
       <div className="max-w-5xl space-y-16">
+        {/* Bloc 1 */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -29,12 +30,13 @@ export default function Presentation() {
             className="w-full md:w-1/2 rounded-md shadow-md"
           />
           <p className="text-[20px] font-[Raleway] md:w-1/2">
-            Chez Vincent, c’est un lieu de convivialité où l’on déguste des cocktails maison dans
-            une ambiance provençale et décontractée. Des produits frais, locaux et un accueil
-            chaleureux.
+            Chez Vincent, c’est un lieu de convivialité où l’on déguste des cocktails maison
+            dans une ambiance provençale et décontractée. Des produits frais, locaux et un
+            accueil chaleureux.
           </p>
         </motion.div>
 
+        {/* Bloc 2 */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -49,24 +51,6 @@ export default function Presentation() {
           <p className="text-[20px] font-[Raleway] md:w-1/2">
             La carte évolue au fil des saisons, alliant créativité et savoir-faire pour surprendre
             vos papilles. Venez vivre une expérience gustative unique, à deux pas du port de Toulon.
-            <motion.div
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
-  className="flex flex-col md:flex-row items-center gap-8"
->
-  <img
-    src="/imageintro2.png"
-    alt="Concept 3"
-    className="w-full md:w-1/2 rounded-md shadow-md"
-  />
-  <p className="text-[20px] font-[Raleway] md:w-1/2">
-    Chez Vincent, c’est aussi une ambiance humaine. Chaque visite est une
-    rencontre, chaque cocktail une histoire. Ici, on valorise l’échange, la
-    proximité et la simplicité.
-  </p>
-</motion.div>
-
           </p>
         </motion.div>
       </div>
