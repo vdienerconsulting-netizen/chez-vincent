@@ -3,18 +3,20 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section
+    <motion.section
       id="hero"
+      initial={{ y: "15vh", scale: 1.12, opacity: 0 }}
+      animate={{ y: 0, scale: 1, opacity: 1 }}
+      transition={{ duration: 1.3, ease: "easeInOut" }}
       className="bg-vert text-sable flex flex-col items-center justify-center text-center overflow-hidden py-16 md:py-20"
     >
-
       {/* Titre */}
       <motion.img
         src="/chez-vincent-titre.png"
         alt="Chez Vincent - Buvette Cocktail"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: -10 }}
-        transition={{ duration: 2, delay: 0.8, ease: "easeOut" }}
+        transition={{ duration: 2, delay: 0.4, ease: "easeOut" }}
         className="w-[60%] md:w-[40%] mt-2"
       />
 
@@ -24,9 +26,9 @@ export default function Hero() {
         alt="Chez Vincent - sous-titre"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: -5 }}
-        transition={{ duration: 2, delay: 1.6, ease: "easeOut" }}
+        transition={{ duration: 2, delay: 0.9, ease: "easeOut" }}
         className="w-[60%] md:w-[40%] mt-2"
       />
-    </section>
+    </motion.section>
   );
 }
