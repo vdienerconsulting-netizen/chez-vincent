@@ -27,18 +27,18 @@ export default function Carte() {
   return (
     <section
       id="carte"
-      className="min-h-screen bg-vert text-sable flex flex-col justify-center items-center px-8 md:px-20 py-20"
+      className="bg-vert text-sable flex flex-col items-center px-8 md:px-20 pt-8 md:pt-10 pb-16 md:pb-20"
     >
       <motion.h2
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-[90px] font-[Bayon] mb-10"
+        className="text-[80px] font-[Bayon] mb-8 text-center"
       >
         La Carte
       </motion.h2>
 
-      <div className="flex flex-wrap justify-center gap-6 mb-12">
+      <div className="flex flex-wrap justify-center gap-6 mb-10">
         {categories.map((cat) => (
           <button
             key={cat}
